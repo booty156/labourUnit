@@ -21,6 +21,11 @@ c = conn.cursor()
 atozfilter = regex = re.compile('[^a-zA-Z]')
 
 class botCommands:
+    
+    async def on_message(message):
+    if message.author.id == 429612785199087626:
+         await message.add_reaction("\U1F418")
+            
     async def ping(message):
         await message.channel.send("pong!")
 
